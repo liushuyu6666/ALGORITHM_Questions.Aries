@@ -60,6 +60,8 @@ Given an integer array `nums`, return `true` *if there exists a triple of indice
 - The `j` is the crucial one, because when we find a value larger than `j` we actually get the point.
 - So, we need to keep `j` to be as smaller as possible, in order to achieve it, try to update `j` regarding `i`. 
 
+### example
+
 | website  | No.                                 |
 | -------- | ----------------------------------- |
 | LeetCode | 334. Increasing Triplet Subsequence |
@@ -82,3 +84,27 @@ Each range [a,b] in the list should be output as:
 ```
 
 - traverse the `nums`,
+
+### example
+
+| website  | No.                 |
+| -------- | ------------------- |
+| leetcode | 163. missing ranges |
+|          |                     |
+|          |                     |
+
+
+
+## Find the intersection of two linked list
+
+### Intro
+
+- get to the same initial point of two linked list and move forward together.
+
+### example
+
+| website  | No.                                   |
+| -------- | ------------------------------------- |
+| leetcode | 160. Intersection of Two Linked Lists |
+|          |                                       |
+
