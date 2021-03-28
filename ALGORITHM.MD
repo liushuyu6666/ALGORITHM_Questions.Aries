@@ -11,6 +11,7 @@ An **iterative** function is one that loops to repeat some part of the code, and
 ### traversal
 
 - [Inorder, Preorder, Postorder](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+- [perfect binary tree](https://en.wikipedia.org/wiki/Binary_tree#:~:text=A%20perfect%20binary%20tree%20is,one%20mother%20and%20one%20father).)
 
 # General Algorithm
 
@@ -124,15 +125,18 @@ Each range [a,b] in the list should be output as:
 
 ### Intro
 
-Utilize `Stack` to store the Tree Node alone the left path or right path, and pop up the Tree Node to access other part of the tree. Check `94. Binary Tree In-order Traversal` to have an inspiration!!!
+### method
+
+- **Depth First Search**: Utilize `Stack` to store the Tree Node alone the left path or right path, and pop up the Tree Node to access other part of the tree. Check `94. Binary Tree In-order Traversal` to have an inspiration!!!
+- **Breadth First Search**: We don't need to use `stack` if we want to save space. Check  
 
 ### example
 
-| website  | No.                                           |
-| -------- | --------------------------------------------- |
-| leetcode | 94. Binary Tree In-order Traversal            |
-| leetcode | 103. Binary Tree Zigzag Level Order Traversal |
-|          |                                               |
+| website  | No.                                              |
+| -------- | ------------------------------------------------ |
+| leetcode | 94. Binary Tree In-order Traversal               |
+| leetcode | 103. Binary Tree Zigzag Level Order Traversal    |
+| leetcode | 116. Populating Next Right Pointers in Each Node |
 
 ## Reconstruct Tree
 
@@ -150,4 +154,11 @@ There are several hints
 
 - we have a `leftBound` which indicates the left bound of the `inorder`
 
-- `curr`  will be determined according to whether is has left wing or not. If the target element in the `inorder` has left wing (it sits on the right hand side of the `leftBound`), we will push it into the `stack`, and move one element forward in the `preorder` list, this element in the `preorder` must be the `curr`'s left child; If not, it will be tricky, check the code.
+- `curr`  will be determined according to whether is has left wing or not. If the target element in the `inorder` has left wing (it sits on the right hand side of the `leftBound`), we will push it into the `stack`, and move one element forward in the `preorder` list, this element in the `preorder` must be the `curr`'s left child; If not, it will be tricky, check the code in `\105. Construct Binary Tree from Preorder and Inorder Traversal`
+
+### example
+
+| website  | No.                                              |
+| -------- | ------------------------------------------------ |
+| leetcode | 116. Populating Next Right Pointers in Each Node |
+|          |                                                  |
