@@ -34,15 +34,23 @@
 
 # Review List
 
-| snippet      | relative questions | date |
-| ------------ | ------------------ | ---- |
-| rotate array | 189. Rotate Array  |      |
-| Eratosthenes | 204. Count Prime   |      |
-|              |                    |      |
+| snippet          | relative questions | date |
+| ---------------- | ------------------ | ---- |
+| Josephus Problem | 189. Rotate Array  |      |
+| Eratosthenes     | 204. Count Prime   |      |
+|                  |                    |      |
 
 # Algorithm
 
 ## Josephus Problem
+
+类似于十一抽杀律 decimation
+
+### code
+
+[java](/java/src/Rotate/Rotate_Array.java)
+
+
 
 
 
