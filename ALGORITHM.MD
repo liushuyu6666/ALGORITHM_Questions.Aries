@@ -44,11 +44,23 @@
 
 ## Josephus Problem
 
-类似于十一抽杀律 decimation
+类似于十一抽杀律 decimation, which is used to rotate continuous elements in an array.
 
 ### code
 
-[java](/java/src/Rotate/Rotate_Array.java)
+[java version](/java/src/Rotate/Rotate_Array.java)
+
+## Eratosthenes
+
+count the number of prime before a certain value
+
+### explanation
+
+[java version](/java/src/Prime/Prime.MD)
+
+### code
+
+[java version](/java/src/Prime/Eratosthenes.java)
 
 
 
