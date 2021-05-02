@@ -1,21 +1,25 @@
 package Rotate;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Rotate_Array {
     public void rotate(int[] nums, int k){
         k = k % nums.length;
-        int cnt = 0, currPos, nextPos, prev, temp;
-        for(int i = 0; cnt < nums.length; i++){
-            currPos = i;
-            nextPos = (currPos + k) % nums.length;
-            prev = nums[currPos];
-            do{
+        int count = 0;
+        for(int i = 0; count < nums.length; i++){
+            int n = 1, currPos = i, nextPos = (currPos + k) % nums.length, prev = nums[currPos], temp;
+            while(nextPos != i){
                 temp = nums[nextPos];
                 nums[nextPos] = prev;
                 prev = temp;
                 currPos = nextPos;
                 nextPos = (currPos + k) % nums.length;
-                cnt++;
-            }while(currPos != i);
+                count++;
+            }
+            nums[nextPos] = prev;
+            count++;
         }
     }
 
@@ -24,8 +28,11 @@ public class Rotate_Array {
         Rotate_Array s = new Rotate_Array();
         s.rotate(nums1, 3);
 
-        for(int i = 0; i<nums1.length; i++){
-            System.out.println(nums1[i]);
+        List<Integer> ans = new ArrayList<>();
+        for(int n : nums1){
+            ans.add(n);
         }
+        System.out.println(ans);
+
     }
 }

@@ -4,7 +4,7 @@ import BinaryTree.*;
 
 import java.util.*;
 
-public class TreeNode_Basic_Exercise {
+public class Binary_Tree_Exercise {
 
     public List<Integer> breadthFirstSearch(TreeNode root){
         List<Integer> traversal = new ArrayList<>();
@@ -44,7 +44,7 @@ public class TreeNode_Basic_Exercise {
         TreeNode root = treeNode.createTreeNode(new Integer[]{1, 2, 3, 4, 5, 6, 7,
                 8, 9, null, 10, null, 11, 13});
 
-        TreeNode_Basic_Exercise test = new TreeNode_Basic_Exercise();
+        Binary_Tree_Exercise test = new Binary_Tree_Exercise();
         Maximum_Depth_of_Binary_Tree maxDepth = new Maximum_Depth_of_Binary_Tree();
         Symmetric_Tree symmetric_tree = new Symmetric_Tree();
         Validate_Binary_Search_Tree validate_binary_search_tree =

@@ -2,22 +2,17 @@ package Rotate;
 
 public class Rotate_image {
     public void rotate(int[][] matrix){
-        int n = matrix.length;  // n = 4;
-        int layer = n / 2; // layer = 2;
-        int temp, x, y;
-
-        for(int l = 0; l < layer; l++){
-            for(int i = l; i <= n - 2 - l; i++){
-                x = i;
-                y = l;
-                temp = matrix[x][y]; // (1, 0)
-                matrix[x][y] = matrix[n-y-1][x]; // (3, 1)
-                matrix[n-y-1][x] = matrix[n-x-1][n-y-1]; // (2, 3)
-                matrix[n-x-1][n-y-1] = matrix[y][n-x-1]; // (0, 2)
-                matrix[y][n-x-1] = temp;
+        int depth = matrix.length / 2, temp, n = matrix.length;
+        for(int i = 0; i < depth; i++){
+            for(int j = i; j < matrix.length - i - 1; j++){
+                temp = matrix[i][j];
+                matrix[i][j] = matrix[n-j-1][i];
+                matrix[n-j-1][i] = matrix[n-i-1][n-j-1];
+                matrix[n-i-1][n-j-1] = matrix[j][n-i-1];
+                matrix[j][n-i-1] = temp;
+                // System.out.println("" + i + j);
             }
         }
-        return;
     }
 
     public static void main(String args[]){

@@ -1,18 +1,10 @@
 public class Best_time_to_buy_and_sell_stock_II {
     public int maxProfit(int[] prices){
-        if(prices.length < 2){
-            return 0;
-        }
-        int sum = 0, i = 0, j = 1;
-        while(i < prices.length && j < prices.length){
-            if(prices[i] > prices[j]){
-                i++;
-                j++;
-            }
-            else{
-                sum += prices[j] - prices[i];
-                i++;
-                j++;
+        if(prices.length < 2) return 0;
+        int sum = 0;
+        for(int i = 1; i < prices.length; i++){
+            if(prices[i] > prices[i-1]){
+                sum += prices[i] - prices[i-1];
             }
         }
         return sum;

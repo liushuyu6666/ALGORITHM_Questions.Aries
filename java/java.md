@@ -5,7 +5,7 @@
    - don't find the min of the hashmap, try to scan the String again.
    - don't use the hashmap since the string only contains lowercase english letters.
 
-2. Delete_node_in_a_linked_list:
+2. LinkedList.Delete_node_in_a_linked_list:
     - move val and node.next = node.next.next
 
 3. String_to_integer:
@@ -50,7 +50,7 @@
    - when facing the String, please check if index beyond the range of the string.
 
 4. Remove Nth Node From End:
-    - when ListNode curr points to the node, we can't end the list by assignning curr = null. The correct is to make prev.next = null. 
+    - when LinkedList.ListNode curr points to the node, we can't end the list by assignning curr = null. The correct is to make prev.next = null. 
 
 5. TreeNode.java:
     - return an anonymous array: return new int[] {1, 2, 3};
@@ -72,8 +72,8 @@
 1. For String
     - letter[26] or character[256] need to use when concerning about frequency.
 
-2. For ListNode:
-    - remove one node, Delete_node_in_a_linked_list.java
+2. For LinkedList.ListNode:
+    - remove one node, LinkedList.Delete_node_in_a_linked_list.java
 
 3. Tree
     - the null child nodes sometime need to be placeholder, so don't forget to put them in the Queue. For example, Maximum_depth_of_binary_tree.java and Validate_binary_search_tree
@@ -165,18 +165,18 @@ while(n>0){
 
 
 
-## `ListNode`
+## `LinkedList.ListNode`
 
 ```java
-public class ListNode {
+public class LinkedList.ListNode {
     int val;
-    ListNode next;
+    LinkedList.ListNode next;
 
-    ListNode() {}
-    ListNode(int x) {
+    LinkedList.ListNode() {}
+    LinkedList.ListNode(int x) {
         this.val = x;
     }
-    ListNode(int val, ListNode next) {
+    LinkedList.ListNode(int val, LinkedList.ListNode next) {
         this.val = val; this.next = next;
     }
 }
@@ -188,14 +188,14 @@ Since the `val` is `int` - a primitive data type, not a `Integer`. It is better 
 
 ```java
 // create it
-h = new ListNode(); // create a header of the node
+h = new LinkedList.ListNode(); // create a header of the node
 curr = h;
 
 // in the loop
 while(1)
 {
     // get the value that need to be stroed in a new node
-    curr.next = new ListNode();
+    curr.next = new LinkedList.ListNode();
     curr = curr.next;
     curr.val = val; // only when you need a new node, you create it and populate it with the value
 }
@@ -218,21 +218,21 @@ return h.next; // abandoned the header.
 
 ## structure class and real class
 
-In the `ListNode.java`
+In the `LinkedList.ListNode.java`
 
 ```java
-public class ListNode {
+public class LinkedList.ListNode {
     int val;
-    ListNode next;
+    LinkedList.ListNode next;
 
-    ListNode() {}
-    ListNode(int x) {
+    LinkedList.ListNode() {}
+    LinkedList.ListNode(int x) {
         this.val = x;
     }
-    ListNode(int val, ListNode next) {
+    LinkedList.ListNode(int val, LinkedList.ListNode next) {
         this.val = val; this.next = next;
     }
 }
 ```
 
-pay attention, this is analogy to structure in c, not a real class (see the name of the class, `ListNode` not List or something else), it define the node of the list not the list itself. So, if you want to achieve print list, you can't achieve it in this class.
+pay attention, this is analogy to structure in c, not a real class (see the name of the class, `LinkedList.ListNode` not List or something else), it define the node of the list not the list itself. So, if you want to achieve print list, you can't achieve it in this class.
