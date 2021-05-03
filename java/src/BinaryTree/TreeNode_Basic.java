@@ -89,8 +89,8 @@ public class TreeNode_Basic {
     }
 
     public List<Integer> postOrderDepthFirstTraversal(TreeNode root){ // left, right, root
-        Stack<TreeNode> upperStack = new Stack<>();
-        Stack<TreeNode> lowerStack = new Stack<>();
+        Stack<TreeNode> upperStack = new Stack<>(); // temporary store node
+        Stack<TreeNode> lowerStack = new Stack<>(); // store the node in order
         List<Integer> traversal = new ArrayList<>();
         TreeNode curr = root;
         while(curr != null || !upperStack.isEmpty()){
