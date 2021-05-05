@@ -48,7 +48,7 @@ public void union(int x, int y){
     if(rank[rootX] <= rank[rootY]) parent[rootX] = rootY;
     else parent[rootY] = rootX;
     if(rank[rootX] == rank[rootY]){
-        rank[rootX]++;
+        rank[rootY]++;
     }
 }
 ```
