@@ -1,3 +1,5 @@
+package BackTracking;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -5,29 +7,31 @@ import java.util.Set;
 
 public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
-        Set<List<Integer>> ans = new HashSet<>();
-        List<List<Integer>> lans = new ArrayList<>();
-        for(int i = 0; i < nums.length; i++){
-            ans = union(nums[i], ans);
+        if(nums.length < 1) return new ArrayList<>();
+        Set<List<Integer>> set = new HashSet<>();
+        List<List<Integer>> ans = new ArrayList<>();
+        for(int n : nums){
+            set = union(set, n);
         }
-        for(List<Integer> an : ans){
-            lans.add(an);
+        for(List<Integer> s : set){
+            ans.add(s);
         }
-        return lans;
+        return ans;
     }
-    public Set<List<Integer>> union(Integer num, Set<List<Integer>> box){
+
+    public Set<List<Integer>> union(Set<List<Integer>> box, int n){
         Set<List<Integer>> ans = new HashSet<>();
-        if(box.size() == 0){
-            List<Integer> temp = new ArrayList<>();
-            temp.add(num);
-            ans.add(temp);
+        if(box.size() < 1){
+            List<Integer> inner = new ArrayList<>();
+            inner.add(n);
+            ans.add(inner);
             return ans;
         }
         for(List<Integer> b : box){
             for(int i = 0; i <= b.size(); i++){
-                List<Integer> bx = new ArrayList<>(b);
-                bx.add(i, num);
-                ans.add(bx);
+                List<Integer> newB = new ArrayList<>(b);
+                newB.add(i, n);
+                ans.add(newB);
             }
         }
         return ans;
