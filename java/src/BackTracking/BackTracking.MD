@@ -28,7 +28,7 @@ One important issue is that, in order to avoid duplicated values, we need to use
 
 [code](permutations.java)
 
-### tips:
+### tips
 
 1. we need to copy the `List<Integer>` and then add Integer in it, don't add in-place
 
@@ -46,3 +46,16 @@ One important issue is that, in order to avoid duplicated values, we need to use
 
 
 
+## word search
+
+use `trace matrix` to record which grid has been traced.
+
+[code](Word_Search.java)
+
+### pitfalls
+
+don't forget to restore the trace matrix.
+
+### tips
+
+we can use `board[x][y] ^= 128` to replace the `trace matrix`.
