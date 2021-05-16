@@ -31,6 +31,10 @@ public class Bit {
         // bit wise not
         System.out.println(~4); // 100 => 011
 
+        // bit with long
+        long tar = 10;
+        System.out.println(10 & (0x1L));
+
 
     }
 
