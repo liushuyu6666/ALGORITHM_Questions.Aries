@@ -7,28 +7,28 @@ import java.util.*;
 
 public class TreeNode_Basic {
 
-//    public TreeNode createTreeNode(Integer[] nums){
+//    public ZZTrashBin.TreeNode createTreeNode(Integer[] nums){
 //        if(nums.length < 1) return null;
 //        if(nums[0] == null) return null;
-//        TreeNode root = new TreeNode(nums[0]);
-//        Queue<TreeNode> q = new LinkedList<>();
+//        ZZTrashBin.TreeNode root = new ZZTrashBin.TreeNode(nums[0]);
+//        Queue<ZZTrashBin.TreeNode> q = new LinkedList<>();
 //        q.add(root);
-//        TreeNode curr;
+//        ZZTrashBin.TreeNode curr;
 //        int i = 1;
 //        while(i < nums.length){
 //            curr = q.poll();
 //            if (nums[i] == null) {
-//                curr.left = new TreeNode(null);
+//                curr.left = new ZZTrashBin.TreeNode(null);
 //            } else {
-//                curr.left = new TreeNode(nums[i]);
+//                curr.left = new ZZTrashBin.TreeNode(nums[i]);
 //                q.add(curr.left);
 //            }
 //            i++;
 //            if(i < nums.length){
 //                if(nums[i] == null){
-//                    curr.right = new TreeNode(null);
+//                    curr.right = new ZZTrashBin.TreeNode(null);
 //                }else{
-//                    curr.right = new TreeNode(nums[i]);
+//                    curr.right = new ZZTrashBin.TreeNode(nums[i]);
 //                    q.add(curr.right);
 //                }
 //                i++;
